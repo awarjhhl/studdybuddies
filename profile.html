@@ -48,6 +48,12 @@ header #usernav a span img { position: relative; top: 8px; background: #cecece; 
 #userStats .data ul.numbers li { width: 95px; float: left; display: block; padding-left: 8px; height: 50px; border-right: 1px dotted #bbb; text-transform: uppercase; }
 #userStats .data ul.numbers li strong { color: #434343; display: block; font-size: 3.4em; line-height: 1.1em; font-weight: bold; }
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
 
 * {
   box-sizing: border-box;
@@ -185,9 +191,6 @@ img.hover-shadow {
 }
 </style>
 <body>
-<header>
-</header>
-<body>
 
 <div class="body">
 <nav class="navbar navbar-inverse">
@@ -262,18 +265,19 @@ img.hover-shadow {
 <h3> Study Skills: </h3>
 <p style="color: black; font-family: Times New Roman;"> Listening to Beethoven and taking notes/drawing </p>
 
+
 <div class="row">
   <div class="column">
-    <img src="IMG_4202.JPG" alt="Amanda"style="width:100px; height:150px;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img src="IMG_4202.JPG" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="IMG_4050.JPG" alt="Amanda" style="width:100px; height:150px;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img src="IMG_4050.JPG" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="IMG_4063.JPG" alt="Amanda" style="width:100px; height:150px;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="IMG_4063.JPG" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
   </div>
   <div class="column">
-    <img src="8006736474_363830002e_b.jpg"alt="kitten" style="width:100px; height:150px;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="8006736474_363830002e_b.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
   </div>
 </div>
 
@@ -283,24 +287,24 @@ img.hover-shadow {
 
     <div class="mySlides">
       <div class="numbertext">1 / 4</div>
-      <img src="IMG_4202.JPG" alt="Amanda"style="width:100%">
+      <img src="IMG_4202.JPG" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / 4</div>
-      <img src="IMG_4050.JPG" alt="Amanda" style="width:100%">
+      <img src="IMG_4050.JPG" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3 / 4</div>
-      <img src="IMG_4063.JPG" alt="Amanda" style="width:100%">
+      <img src="IMG_4063.JPG" style="width:100%">
     </div>
-
+    
     <div class="mySlides">
       <div class="numbertext">4 / 4</div>
-      <img src="8006736474_363830002e_b.jpg"alt="kitten" style="width:100%">
+      <img src="8006736474_363830002e_b.jpg" style="width:100%">
     </div>
-
+    
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -310,16 +314,16 @@ img.hover-shadow {
 
 
     <div class="column">
-      <img class="demo cursor" src="IMG_4202.JPG" onclick="currentSlide(1)" alt="Amanda">
+      <img class="demo cursor" src="IMG_4202.JPG" style="width:100%" onclick="currentSlide(1)" alt="Amanda">
     </div>
     <div class="column">
-      <img class="demo cursor" src="IMG_4050.JPG" onclick="currentSlide(2)" alt="Amanda">
+      <img class="demo cursor" src="IMG_4050.JPG" style="width:100%" onclick="currentSlide(2)" alt="Amanda">
     </div>
     <div class="column">
-      <img class="demo cursor" src="IMG_4063.JPG" onclick="currentSlide(3)" alt="Amanda">
+      <img class="demo cursor" src="IMG_4063.JPG" style="width:100%" onclick="currentSlide(3)" alt="Amanda">
     </div>
     <div class="column">
-      <img class="demo cursor"src="8006736474_363830002e_b.jpg" onclick="currentSlide(4)" alt="Amanda">
+      <img class="demo cursor" src="8006736474_363830002e_b.jpg" style="width:100%" onclick="currentSlide(4)" alt="kitten and food">
     </div>
   </div>
 </div>
@@ -362,7 +366,6 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-
 </section>
 
 <section id="right">
@@ -390,5 +393,7 @@ function showSlides(n) {
 </div>
 </section>
 </div>
+    
 </body>
 </html>
+
