@@ -57,6 +57,7 @@
     color:white;
     background-color:#5e5060;
     height: 100px;
+    border:none;
     }
 @font-face {
     font-family: KGMissKindergarten;
@@ -68,12 +69,54 @@ body {
 .big {
     size:50px;
     position:fixed;
-    top:36px;
+    top:32px;
+    }
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+ .button1 {
+    background-color: #ffe8b9; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width:25%;
+    height:150%;
+    position:fixed;
+    right:5%;
+    top:80;
+    }
+.button2 {
+    background-color: #ffe8b9;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width:25%;
+    height:150%;
+    position:fixed;
+    left:5%;
+    top:80;
+    
     }
 </style>
 </head>
 
-<body style="height:1200px">
+<body style="height:1350px">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -111,6 +154,10 @@ body {
         <img src="study aesthetic 4.jpg" alt="four" />
         <div>
             Success like never before!</div>
+
+<button class="button button1"><a href="http://pusheenie00.pythonanywhere.com/" target="_blank" class="big">Go to QA Forum now</a></button>
+  
+<button class="button button2"><a href="http://pusheen00.pythonanywhere.com/" target="_blank" class="big">Go to notebook now</a></button>
     </div>
 
 </body>
