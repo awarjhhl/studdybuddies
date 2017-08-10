@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Study Buddies</title>
+<link rel="stylesheet" type="text/css" href="global.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+@import url('master.css');
+body {
+	background: #000;
+	overflow: scroll;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 30s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@-webkit-keyframes pulse {
+	from {
+		background: #dff0ef;
+	}
+	25% {
+		background-color: #c8ebd4;
+	}
+	50% {
+		background-color: #5e5060;
+	}
+	to {
+		background: #ffa7b2;
+	}
+}
+.wrapper { width: 850px; overflow: hidden; margin: 0 auto; background: none; }
+header #usernav { float: right; line-height: 100px; font-size: 14px; font-weight: bold; color: #555; }
+header #usernav a { color: #444; text-shadow: 0px 1px 1px #ddd; }
+header #usernav a span img { position: relative; top: 8px; background: #cecece; margin-left: 5px; padding: 3px; border: 1px solid #969696; }
+#content { display: block; width: 820px; margin: 0 auto; }
+#left { display: block; width: 560px; float: left; overflow: hidden; margin-right: 20px; }
+#right { display: block; width: 240px; float: left; overflow: hidden; }
+#userStats { display: block; width: auto; background-color: #f9f9f9; border: 1px solid #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 12px; }
+#userStats .pic { float: left; display: block; margin-right: 10px; }
+#userStats .pic a img { padding: 7px; background: #fff; border: 1px solid #ccc; }
+#userStats .data .sep { clear: both; margin-top: 40px; width: 320px; height: 1px; border-bottom: 1px solid #ccc; margin-bottom: 0; }
+#userStats .data ul.numbers { list-style: none; width: 320px; padding-top: 7px; margin-top: 0; border-top: 1px solid #fff; color: #676767; }
+#userStats .data ul.numbers li { width: 95px; float: left; display: block; padding-left: 8px; height: 50px; border-right: 1px dotted #bbb; text-transform: uppercase; }
+#userStats .data ul.numbers li strong { color: #434343; display: block; font-size: 3.4em; line-height: 1.1em; font-weight: bold; }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.row > .column {
+  padding: 0 8px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  float: left;
+  width: 25%;
+}
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mySlides {
+  display: none;
+}
+.cursor {
+  cursor: pointer
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+img {
+  margin-bottom: -4px;
+}
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+.demo {
+  opacity: 0.6;
+}
+.active,
+.demo:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  transition: 0.3s
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+</style>
+<body>
+
+<div class="body">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Study Buddies</a>
+    </div>
+    <ul class="nav navbar-nav">
+
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Subjects</a></li>
+
+          <li><a tabindex="-1" href="#">Math</a></li>
+          <li><a tabindex="-1" href="#">Science</a></li>
+          <li><a tabindex="-1" href="#">Literature</a></li>
+          <li><a tabindex="-1" href="#">Arts</a></li>
+          <li><a tabindex="-1" href="#">History/Geography</a></li>
+          <li><a tabindex="-1" href="#">Computer Science</a></li>
+          <li><a tabindex="-1" href="#">Other</a></li>
+          <li class="divider"></li>
+          <li><a href="#">User</a></li>
+          <li><a href="#">Notebook</a></li>
+          <li><a href="#">Q & A</a></li>
+        </ul>
+      </li>
+
+   </ul>
+   <form class="navbar-form navbar-left">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+        </form>
+      </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div id="content" class="clearfix">
+<section id="left">
+<div id="userStats" class="clearfix">
+<div class="pic">
+<a href="#"><img src="IMG_2120.png" alt="Profile picture" width="150" height="150" /></a>
+</div>
+
+<div class="data">
+<h1>Jasmin Hernandez</h1>
+<h3>Chicago, IL</h3>
+<h4><a href="https://www.youtube.com/watch?v=miomuSGoPzI"></a></h4>
+<div class="socialMediaLinks">
+<a href="https://www.instagram.com/beautifuladieu/" rel="me" target="_blank"><p> </p></a>
+
+</div>
+
+</div>
+
+<h1>About Me:</h1>
+<p style="color: black; font-family: Times New Roman;">I like to spend time with family and friends.I also love to travel to new places and try new things that are oustide the box. </p>
+<h3>School: </h3>
+<p style="color: black; font-family: Times New Roman;">The Noble Academy </p>
+<h3> Favorite Subject: </h3>
+<p style="color: black; font-family: Times New Roman;"> History </p>
+<h3> Current Courses: </h3>
+<p style="color: black; font-family: Times New Roman;">Composition, Math, Literature, Band </p>
+<h3> Study Skills: </h3>
+<p style="color: black; font-family: Times New Roman;"> Listening to music and taking notes/making flash cards </p>
+
+
+<div class="row">
+  <div class="column">
+    <img src="IMG_2373.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_2108.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_1943.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="IMG_1897.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="IMG_2373.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="IMG_2108.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="IMG_1943.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="IMG_1897.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="IMG_2373.jpg" style="width:100%" onclick="currentSlide(1)" alt="Jasmin">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="IMG_2108.jpg" style="width:100%" onclick="currentSlide(2)" alt="Jasmin">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="IMG_1943.png" style="width:100%" onclick="currentSlide(3)" alt="Jasmin">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="IMG_1897.jpg" style="width:100%" onclick="currentSlide(4)" alt="Plane">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</section>
+
+<section id="right">
+<div class="gcontent">
+
+</div>
+
+<div class="gcontent">
+<div class="head"><h1>Friends List</h1></div>
+<div class="boxy">
+<p>Your friends – 3 total</p>
+
+<div class="friendslist clearfix">
+<div class="friend">
+<span class="friendly"><a href="#">AJ R.</a></span>
+</div>
+
+<div class="friend">
+<span class="friendly"><a href="#">Hannah L.</a></span>
+</div>
+
+<div class="friend"><span class="friendly"><a href="#">Amanda W.</a></span>
+</div>
+
+</div>
+</section>
+</div>
+    
+</body>
+</html>
